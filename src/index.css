@@ -1,13 +1,79 @@
+:root {
+  /* ==================================================
+     COLORS
+  ================================================== */
+
+  --primary: #0d6efd;
+  --icon-hover: #cde1f8;
+  --text: #444;
+  --title: #1e1e1e;
+  --bg: #eee;
+  --black: #000;
+
+  /* ==================================================
+     TYPOGRAPHY
+  ================================================== */
+
+  --font-main: "Nunito Sans", sans-serif;
+  --font-weight-text: 400;
+  --font-weight-title: 600;
+}
+
+/* ==================================================
+   GLOBAL STYLES
+================================================== */
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+
+  font-family: var(--font-main);
+  font-weight: var(--font-weight-text);
+
+  background-color: var(--bg);
+  color: var(--text);
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* ==================================================
+   TITLES
+================================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+  font-weight: var(--font-weight-title);
+  color: var(--title);
+}
+
+/* ==================================================
+   NAVBAR LINKS
+================================================== */
+
+.nav-link-custom {
+  padding: 5px 10px;
+  border-radius: 5px;
+
+  transition: background-color 0.3s ease;
+}
+
+.nav-link-custom:hover {
+  background-color: rgba(181, 181, 181, 0.221);
+}
+
+/* ==================================================
+   CARD DE SERVICE : Effet au survol de l’icône
+================================================== */
+
+.service-card {
+  transition: color 0.3s ease; /* pour un effet doux */
+}
+
+.service-card:hover {
+  color: var(--icon-hover);
 }
